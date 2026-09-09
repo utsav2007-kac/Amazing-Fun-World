@@ -1,0 +1,397 @@
+<!doctype html>
+
+<html class="scroll-smooth overflow-x-hidden" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Rides | ThrillQuest Amusement Parks</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Config -->
+  <script src="assets/js/tailwind-config.js"></script>
+  <!-- Google Fonts: Atma + Nunito + Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <!-- Shared CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+  <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+  <div id=navbar-placeholder></div>
+    <main class="">
+      <!-- Hero Section -->
+      <section
+        class="relative h-[100vh] w-full flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Hero Ride"
+            class="w-full h-full object-cover brightness-[0.7]"
+            src="assets/images/r.jpg"
+          />
+        </div>
+        <div class="relative z-10 pt-14 text-center px-gutter max-w-4xl">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md mb-3 uppercase tracking-wider animate-bounce"
+            >New for 2024</span
+          >
+          <h1
+            class="font-cursive text-4xl sm:text-6xl md:text-7xl lg:text-9xl text-white drop-shadow-2xl mb-4 leading-tight"
+          >
+            Thrilling Rides &amp; Attractions
+          </h1>
+          <p
+            class="text-white font-body-lg text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md mb-10"
+          >
+            From gravity-defying coasters to magical family journeys, discover
+            the pulse-pounding excitement waiting for you at ThrillQuest.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-lg hover:scale-105 transition-transform shadow-lg flex items-center gap-2"
+              href="#ride-grid"
+            >
+              <span class="material-symbols-outlined">explore</span> Explore All
+              Rides
+            </a>
+           
+          </div>
+        </div>
+      </section>
+      <!-- Quick Filters -->
+      <section class="bg-surface-container-low py-12">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-6">
+            <h2 class="font-headline-lg text-on-surface font-cursive">
+              Filter Your Adventure
+            </h2>
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md flex items-center gap-2"
+              >
+                All Rides
+              </button>
+              <button
+                class="bg-white text-on-surface-variant border border-outline-variant px-6 py-2 rounded-full font-label-md hover:border-primary hover:text-primary transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >rocket_launch</span
+                >
+                Thrill Seekers
+              </button>
+              <button
+                class="bg-white text-on-surface-variant border border-outline-variant px-6 py-2 rounded-full font-label-md hover:border-primary hover:text-primary transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >family_restroom</span
+                >
+                Family Fun
+              </button>
+              <button
+                class="bg-white text-on-surface-variant border border-outline-variant px-6 py-2 rounded-full font-label-md hover:border-primary hover:text-primary transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >child_care</span
+                >
+                Kiddie Rides
+              </button>
+              <button
+                class="bg-white text-on-surface-variant border border-outline-variant px-6 py-2 rounded-full font-label-md hover:border-primary hover:text-primary transition-all flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >water_drop</span
+                >
+                Water Rides
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main Ride Grid (Bento Style) -->
+      <section
+        class="py-section-gap-mobile md:py-section-gap-desktop max-w-container-max mx-auto px-gutter"
+        id="ride-grid"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Octopus -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Octopus Ride"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/ride.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-primary">
+                OCTOPUS
+              </h4>
+            </div>
+          </div>
+          <!-- Big Pendulum -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Big Pendulum"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/rides.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-tertiary">
+                BIG PENDULUM
+              </h4>
+            </div>
+          </div>
+          <!-- Repeal Fare -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Repeal Fare"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/slider_02.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-primary">
+                REPEAL FARE
+              </h4>
+            </div>
+          </div>
+          <!-- Top Spring -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Top Spring"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/slider_01.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-secondary">
+                TOP SPRING
+              </h4>
+            </div>
+          </div>
+          <!-- Flying Chair -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Flying Chair"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/slider_03.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-primary">
+                FLYING CHAIR
+              </h4>
+            </div>
+          </div>
+          <!-- Surfer Ride -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Surfer Ride"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/happy.jpeg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-tertiary">
+                SURFER RIDE
+              </h4>
+            </div>
+          </div>
+          <!-- Dressing Car -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Dressing Car"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/gamezone.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-primary">
+                DRESSING CAR
+              </h4>
+            </div>
+          </div>
+          <!-- Bouncy -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Bouncy"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/Bouncy.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-secondary">
+                BOUNCY
+              </h4>
+            </div>
+          </div>
+          <!-- Trampoline -->
+          <div
+            class="group bg-white rounded-[24px] shadow-sm border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Trampoline"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="assets/images/Trampoline.jpg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-cursive text-headline-md text-primary">
+                TRAMPOLINE - FIRST IN GUJARAT
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stats Section -->
+      <section class="bg-inverse-surface py-20 overflow-hidden relative">
+        <div class="max-w-container-max mx-auto px-gutter relative z-10">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div>
+              <div
+                class="text-secondary font-display-lg text-5xl md:text-7xl mb-2"
+              >
+                9+
+              </div>
+              <div
+                class="text-white/60 font-label-md uppercase tracking-widest"
+              >
+                Amazing Rides
+              </div>
+            </div>
+            <div>
+              <div
+                class="text-secondary font-display-lg text-5xl md:text-7xl mb-2"
+              >
+                12
+              </div>
+              <div
+                class="text-white/60 font-label-md uppercase tracking-widest"
+              >
+                Thrill Coasters
+              </div>
+            </div>
+            <div>
+              <div
+                class="text-secondary font-display-lg text-5xl md:text-7xl mb-2"
+              >
+                7
+              </div>
+              <div
+                class="text-white/60 font-label-md uppercase tracking-widest"
+              >
+                Themed Zones
+              </div>
+            </div>
+            <div>
+              <div
+                class="text-secondary font-display-lg text-5xl md:text-7xl mb-2"
+              >
+                100%
+              </div>
+              <div
+                class="text-white/60 font-label-md uppercase tracking-widest"
+              >
+                Fun Guaranteed
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative circle -->
+        <div
+          class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"
+        ></div>
+      </section>
+      <!-- Bottom CTA -->
+      <section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div
+            class="bg-primary rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden"
+          >
+            <div class="relative z-10 max-w-3xl mx-auto">
+              <h2 class="font-headline-xl text-white mb-6">
+                Ready to Feel the Rush?
+              </h2>
+              <p class="text-white/80 font-body-lg mb-10 text-xl">
+                Buy your tickets online now and save up to 20% on gate prices.
+                Skip the queues and head straight to the thrills!
+              </p>
+              <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                  href="booking.html"
+                  class="bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-fixed transition-all shadow-xl text-center block"
+                >
+                  Get Tickets Now
+                </a>
+                
+              </div>
+            </div>
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+              <svg
+                height="100%"
+                preserveaspectratio="none"
+                viewbox="0 0 100 100"
+                width="100%"
+              >
+                <path
+                  d="M0 50 Q 25 0 50 50 T 100 50"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  vector-effect="non-scaling-stroke"
+                ></path>
+                <path
+                  d="M0 60 Q 25 10 50 60 T 100 60"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  vector-effect="non-scaling-stroke"
+                ></path>
+                <path
+                  d="M0 40 Q 25 -10 50 40 T 100 40"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  vector-effect="non-scaling-stroke"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  <div id=footer-placeholder></div>
+    <!-- Shared JS -->
+  <script src="assets/js/main.js"></script>
+  <script src=assets/js/navbar.js></script>
+  <script src=assets/js/footer.js></script>
+</body>
+</html>

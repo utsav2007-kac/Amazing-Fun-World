@@ -1,0 +1,182 @@
+<!doctype html>
+
+<html class="scroll-smooth overflow-x-hidden" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contact Us - ThrillQuest Amazing Fun World</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Config -->
+  <script src="assets/js/tailwind-config.js"></script>
+  <!-- Google Fonts: Atma + Nunito + Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <!-- Shared CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-background font-body-md">
+  <div id=navbar-placeholder></div>
+  <!-- Hero Section -->
+  <header class="relative h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 hero-gradient z-10"></div>
+      <img alt="Amazing Fun World Theme Park" class="w-full h-full object-cover scale-105 animate-[pulse_10s_infinite]"
+        src="assets/images/contact1.jpg" />
+    </div>
+    <div class="relative z-20 text-center px-gutter">
+      <h1 class="text-white font-atma text-[40px] sm:text-[60px] md:text-[80px] leading-tight mb-4 drop-shadow-lg">
+        Amazing Fun World
+      </h1>
+      <p class="text-white font-headline-md text-headline-md opacity-90">
+        Contact Us & Start Your Adventure
+      </p>
+    </div>
+  </header>
+  <!-- Main Content Grid -->
+  <main class="max-w-container-max mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <!-- Contact Form Section (Bento Style) -->
+      <div class="lg:col-span-7 bg-surface-container-lowest rounded-[24px] p-8 md:p-12 vibrant-shadow">
+        <h2 class="font-atma text-primary text-[40px] mb-8">Get In Touch</h2>
+        <form action="#" class="space-y-6" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="font-label-md text-on-surface-variant ml-1">Full Name</label>
+              <input
+                class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-soft"
+                placeholder="John Doe" required="" type="text" />
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-md text-on-surface-variant ml-1">Email Address</label>
+              <input
+                class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-soft"
+                placeholder="john@example.com" required="" type="email" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="font-label-md text-on-surface-variant ml-1">Subject</label>
+            <input
+              class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-soft"
+              placeholder="Inquiry about group bookings" required="" type="text" />
+          </div>
+          <div class="space-y-2">
+            <label class="font-label-md text-on-surface-variant ml-1">Message</label>
+            <textarea
+              class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-surface-soft resize-none"
+              placeholder="How can we help you?" required="" rows="5"></textarea>
+          </div>
+          <button
+            class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 rounded-full font-headline-md hover:scale-[1.02] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
+            type="submit">
+            Send Message
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </form>
+      </div>
+      <!-- Contact Information Sidebar -->
+      <div class="lg:col-span-5 space-y-8">
+        <!-- Information Cards -->
+        <div class="grid grid-cols-1 gap-6">
+          <!-- Opening Hours Card -->
+          <div
+            class="group bg-surface-container rounded-[24px] p-6 flex gap-6 items-start hover:bg-primary-fixed transition-colors">
+            <div
+              class="bg-tertiary-container p-4 rounded-2xl text-on-tertiary-container group-hover:bg-tertiary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[32px]">schedule</span>
+            </div>
+            <div>
+              <h3 class="font-headline-md text-headline-md text-tertiary mb-1">
+                ✦ OPENING HOURS ✦
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Mon – Sun <span class="mx-2">•</span> 09:00 am – 06:00 pm
+              </p>
+            </div>
+          </div>
+          <!-- Location Card -->
+          <div
+            class="group bg-surface-container rounded-[24px] p-6 flex gap-6 items-start hover:bg-primary-fixed transition-colors">
+            <div
+              class="bg-primary-container p-4 rounded-2xl text-on-primary-container group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[32px]">location_on</span>
+            </div>
+            <div>
+              <h3 class="font-headline-md text-headline-md text-primary mb-1">
+                Our Location
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                At. Dhrashanvel, Devbhoomi Dwarka, Gujarat (India)
+              </p>
+            </div>
+          </div>
+          <!-- Phone Card -->
+          <div
+            class="group bg-surface-container rounded-[24px] p-6 flex gap-6 items-start hover:bg-primary-fixed transition-colors">
+            <div
+              class="bg-secondary-container p-4 rounded-2xl text-on-secondary-container group-hover:bg-secondary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[32px]">call</span>
+            </div>
+            <div>
+              <h3 class="font-headline-md text-headline-md text-secondary mb-1">
+                Phone Numbers
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                +91 9427444848
+              </p>
+              <p class="font-body-md text-on-surface-variant">
+                +91 9016092103
+              </p>
+            </div>
+          </div>
+          <!-- Email Card -->
+          <div
+            class="group bg-surface-container rounded-[24px] p-6 flex gap-6 items-start hover:bg-primary-fixed transition-colors">
+            <div
+              class="bg-tertiary-container p-4 rounded-2xl text-on-tertiary-container group-hover:bg-tertiary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[32px]">mail</span>
+            </div>
+            <div>
+              <h3 class="font-headline-md text-headline-md text-tertiary mb-1">
+                Email Us
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                amazingbooking46@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Map Action Card -->
+        <div class="relative rounded-[24px] overflow-hidden group h-64 vibrant-shadow">
+          <div
+            class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 flex flex-col items-center justify-center text-white">
+            <span class="material-symbols-outlined text-5xl mb-2 drop-shadow-md">map</span>
+            <h4 class="font-headline-md text-headline-md drop-shadow-md mb-4">
+              Find Us On Google Maps
+            </h4>
+            <a class="bg-white text-primary px-8 py-3 rounded-full font-label-md shadow-xl hover:scale-105 transition-transform"
+              href="https://www.google.com/maps?q=Dhrashanvel,Devbhoomi+Dwarka" target="_blank">
+              View Directions
+            </a>
+          </div>
+          <img class="w-full h-full object-cover"
+            data-alt="A detailed aerial map view illustration of a vibrant theme park located near the coast of Dwarka Gujarat. The map shows colorful rollercoasters, blue water parks, and green parking areas with high-contrast labels in a modern light-mode UI style. The lighting is bright and sunny, reflecting a joyous and energetic holiday atmosphere."
+            src="assets/images/img_25.jpg" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id=footer-placeholder></div>
+  <!-- Shared JS -->
+  <script src="assets/js/main.js"></script>
+  <script src=assets/js/navbar.js></script>
+  <script src=assets/js/footer.js></script>
+</body>
+
+</html>

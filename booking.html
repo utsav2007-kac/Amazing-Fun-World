@@ -1,0 +1,377 @@
+<!doctype html>
+
+<html class="scroll-smooth overflow-x-hidden" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ThrillQuest | Book Your Adventure</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Config -->
+  <script src="assets/js/tailwind-config.js"></script>
+  <!-- Google Fonts: Atma + Nunito + Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <!-- Shared CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+  <div id=navbar-placeholder></div>
+  <!-- Hero Background Animation Section -->
+  <main class="flex-grow pt-36 md:pt-40 pb-section-gap-mobile md:pb-section-gap-desktop relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute inset-0 -z-10 opacity-20 pointer-events-none"></div>
+    <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Booking Form Section -->
+      <div
+        class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 md:p-12 rounded-[32px] shadow-sm relative overflow-hidden">
+        <!-- Heading with Atma Font -->
+        <div class="mb-10 text-center md:text-left">
+          <h1 class="font-atma text-[48px] leading-tight">
+            <span class="text-tertiary"> Booking</span>
+            <span class="text-on-surface">Inquiry</span>
+          </h1>
+          <p class="text-on-surface-variant font-body-md mt-2">
+            Send your booking inquiry to ThrillQuest Amusement Park
+          </p>
+        </div>
+        <form class="space-y-8" id="booking-form">
+          <!-- Ticket Tiers Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            <div
+              class="ticket-card bg-secondary-container/10 border-2 border-secondary-container p-6 rounded-2xl flex flex-col items-center text-center">
+              <span class="font-atma text-secondary-container text-xl font-bold uppercase tracking-wider">Themes</span>
+              <div class="my-2">
+                <span class="text-on-surface font-headline-md" id="lbl-themes-price">₹ 400</span>
+                <span class="text-on-surface-variant text-sm block">Per Person</span>
+              </div>
+              <input
+                class="w-20 text-center bg-surface border-outline-variant focus:border-primary focus:ring-primary rounded-lg"
+                id="qty-themes" min="0" placeholder="0" type="number" value="0" />
+            </div>
+            <div
+              class="ticket-card bg-primary-container/10 border-2 border-primary-container p-6 rounded-2xl flex flex-col items-center text-center">
+              <span class="font-atma text-primary-container text-xl font-bold uppercase tracking-wider">Rides</span>
+              <div class="my-2">
+                <span class="text-on-surface font-headline-md" id="lbl-rides-price">₹ 400</span>
+                <span class="text-on-surface-variant text-sm block">Per Person</span>
+              </div>
+              <input
+                class="w-20 text-center bg-surface border-outline-variant focus:border-primary focus:ring-primary rounded-lg"
+                id="qty-rides" min="0" placeholder="0" type="number" value="0" />
+            </div>
+            <div
+              class="ticket-card bg-green-100 border-2 border-green-600 p-6 rounded-2xl flex flex-col items-center text-center">
+              <span class="font-atma text-green-700 text-xl font-bold uppercase tracking-wider">Combo</span>
+              <div class="my-2">
+                <span class="text-on-surface font-headline-md" id="lbl-combo-price">₹ 600</span>
+                <span class="text-on-surface-variant text-sm block">Per Person</span>
+              </div>
+              <input
+                class="w-20 text-center bg-surface border-outline-variant focus:border-primary focus:ring-primary rounded-lg"
+                id="qty-combo" min="0" placeholder="0" type="number" value="0" />
+            </div>
+            <div
+              class="ticket-card bg-orange-100 border-2 border-orange-500 p-6 rounded-2xl flex flex-col items-center text-center">
+              <span class="font-atma text-orange-700 text-xl font-bold uppercase tracking-wider">Rooms</span>
+              <div class="my-2">
+                <span class="text-on-surface font-headline-md" id="lbl-rooms-price">₹ 4,500</span>
+                <span class="text-on-surface-variant text-sm block">Per Night</span>
+              </div>
+              <input
+                class="w-20 text-center bg-surface border-outline-variant focus:border-primary focus:ring-primary rounded-lg"
+                id="qty-rooms" min="0" placeholder="0" type="number" value="0" />
+            </div>
+          </div>
+          <!-- Personal Details -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div class="col-span-full">
+              <label class="block font-label-md text-on-surface mb-2">Your Name <span
+                  class="text-error">*</span></label>
+              <input
+                id="name"
+                class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="John Doe" required="" type="text" />
+            </div>
+            <div>
+              <label class="block font-label-md text-on-surface mb-2">Booking Date <span
+                  class="text-error">*</span></label>
+              <div class="relative">
+                <input
+                  id="booking_date"
+                  class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                  required="" type="date" />
+              </div>
+            </div>
+            <div>
+              <label class="block font-label-md text-on-surface mb-2">City</label>
+              <input
+                id="city"
+                class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="Enter your city" type="text" />
+            </div>
+            <div>
+              <label class="block font-label-md text-on-surface mb-2">Contact <span class="text-error">*</span></label>
+              <input
+                id="contact"
+                class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="+91 00000 00000" required="" type="tel" />
+            </div>
+            <div>
+              <label class="block font-label-md text-on-surface mb-2">Email <span class="text-error">*</span></label>
+              <input
+                id="email"
+                class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="name@example.com" required="" type="email" />
+            </div>
+            <div class="col-span-full">
+              <label class="block font-label-md text-on-surface mb-2">No. of Persons <span class="text-error">*</span></label>
+              <input
+                id="persons"
+                class="w-full h-12 px-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="1" required="" type="number" min="1" value="1" />
+            </div>
+            <div class="col-span-full">
+              <label class="block font-label-md text-on-surface mb-2">Message</label>
+              <textarea
+                id="message"
+                class="w-full p-4 rounded-xl border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-surface-soft font-medium"
+                placeholder="Add special requests, room selections or inquiries..." rows="4"></textarea>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button
+              class="w-full md:w-auto px-12 py-4 bg-primary-container text-on-primary-container font-headline-md rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
+              type="submit">
+              <span class="material-symbols-outlined">send</span>
+              Booking Inquiry
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Summary Sidebar -->
+      <div class="lg:col-span-4">
+        <div class="lg:sticky lg:top-22 space-y-8">
+          <!-- Opening Hours Card -->
+          <div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-[32px] shadow-sm text-center">
+            <h4 class="font-headline-sm uppercase tracking-widest flex items-center justify-center gap-2 mb-2 text-primary font-bold">
+              <span>✦</span> OPENING HOURS <span>✦</span>
+            </h4>
+            <p class="font-body-lg font-bold text-on-surface-variant">
+              Mon – Sun <span class="mx-2">•</span> 09:00 am – 06:00 pm
+            </p>
+          </div>
+          <!-- Summary Card -->
+          <div class="bg-surface-container-high border border-outline-variant p-8 rounded-[32px] shadow-xl">
+            <h3 class="font-headline-md mb-6 border-b border-outline-variant pb-4 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">receipt_long</span>
+              Booking Summary
+            </h3>
+            <div class="space-y-4 mb-8" id="summary-items">
+              <div class="flex justify-between text-on-surface-variant font-body-md">
+                <span>Themes (x<span id="sum-themes-qty">0</span>)</span>
+                <span>₹ <span id="sum-themes-price">0</span></span>
+              </div>
+              <div class="flex justify-between text-on-surface-variant font-body-md">
+                <span>Rides (x<span id="sum-rides-qty">0</span>)</span>
+                <span>₹ <span id="sum-rides-price">0</span></span>
+              </div>
+              <div class="flex justify-between text-on-surface-variant font-body-md">
+                <span>Combo (x<span id="sum-combo-qty">0</span>)</span>
+                <span>₹ <span id="sum-combo-price">0</span></span>
+              </div>
+              <div class="flex justify-between text-on-surface-variant font-body-md">
+                <span>Rooms (x<span id="sum-rooms-qty">0</span>)</span>
+                <span>₹ <span id="sum-rooms-price">0</span></span>
+              </div>
+            </div>
+            <div class="border-t-2 border-dashed border-outline-variant pt-6 mb-8">
+              <div class="flex justify-between items-end">
+                <span class="font-headline-md text-on-surface uppercase tracking-wider text-sm font-bold">Total
+                  Amount</span>
+                <div class="text-right">
+                  <span class="text-primary font-headline-xl block">₹ <span id="total-price">0</span></span>
+                  <span class="text-xs text-on-surface-variant">(Incl. all taxes)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-surface p-4 rounded-xl border border-outline-variant/30 text-center">
+              <p class="text-sm font-label-md text-primary">
+                🎉 Flash Sale! 5% discount on Combo bookings above 5 people.
+              </p>
+            </div>
+          </div>
+          <!-- Feature Card -->
+          <div class="relative h-64 rounded-[32px] overflow-hidden group shadow-lg">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              data-alt="A vibrant amusement park panorama with a high-energy roller coaster zooming through a clear blue sky. Bright secondary orange and primary blue flags flutter in the breeze. Families with diverse backgrounds are cheering joyfully. The lighting is sunny and cinematic, capturing the festive and hyper-dynamic atmosphere of ThrillQuest."
+              style="
+                  background-image: url(&quot;assets/images/img_11.jpg&quot;);
+                "></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <h4 class="text-white font-headline-md">Thrilling Rides</h4>
+              <p class="text-white/80 text-sm">
+                Experience the world's tallest roller coasters.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id=footer-placeholder></div>
+  <!-- Shared JS -->
+  <script src="assets/js/main.js"></script>
+  <script src=assets/js/navbar.js></script>
+  <script src=assets/js/footer.js></script>
+  <script>
+    let prices = {
+      themes: 400,
+      rides: 400,
+      combo: 600,
+      rooms: 4500
+    };
+
+    const labelPrices = {
+      themes: document.getElementById("lbl-themes-price"),
+      rides: document.getElementById("lbl-rides-price"),
+      combo: document.getElementById("lbl-combo-price"),
+      rooms: document.getElementById("lbl-rooms-price")
+    };
+
+    fetch("admin/submit_inquiry.php?action=get_rates")
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.rates) {
+          prices = data.rates;
+          for (let key in labelPrices) {
+            if (labelPrices[key]) {
+              labelPrices[key].innerText = "₹ " + parseInt(prices[key]).toLocaleString("en-IN");
+            }
+          }
+          updateSummary();
+        }
+      })
+      .catch(err => console.error("Error fetching rates:", err));
+
+    const inputs = {
+      themes: document.getElementById("qty-themes"),
+      rides: document.getElementById("qty-rides"),
+      combo: document.getElementById("qty-combo"),
+      rooms: document.getElementById("qty-rooms")
+    };
+
+    const sumQty = {
+      themes: document.getElementById("sum-themes-qty"),
+      rides: document.getElementById("sum-rides-qty"),
+      combo: document.getElementById("sum-combo-qty"),
+      rooms: document.getElementById("sum-rooms-qty")
+    };
+
+    const sumPrice = {
+      themes: document.getElementById("sum-themes-price"),
+      rides: document.getElementById("sum-rides-price"),
+      combo: document.getElementById("sum-combo-price"),
+      rooms: document.getElementById("sum-rooms-price")
+    };
+
+    const totalPriceEl = document.getElementById("total-price");
+
+    function updateSummary() {
+      let total = 0;
+
+      for (let key in inputs) {
+        const qty = parseInt(inputs[key].value) || 0;
+        const cost = qty * prices[key];
+
+        sumQty[key].innerText = qty;
+        sumPrice[key].innerText = cost.toLocaleString("en-IN");
+
+        total += cost;
+      }
+
+      // 5% discount on Combo bookings above 5 people
+      const comboQty = parseInt(inputs.combo.value) || 0;
+      if (comboQty >= 5) {
+        total = total * 0.95;
+      }
+
+      totalPriceEl.innerText = Math.round(total).toLocaleString("en-IN");
+    }
+
+    for (let key in inputs) {
+      inputs[key].addEventListener("input", updateSummary);
+    }
+
+    document.getElementById("booking-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const originalContent = btn.innerHTML;
+
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin">autorenew</span> Processing...`;
+
+      // Gather form data
+      const formData = {
+        name: document.getElementById("name").value,
+        booking_date: document.getElementById("booking_date").value,
+        city: document.getElementById("city").value,
+        contact: document.getElementById("contact").value,
+        email: document.getElementById("email").value,
+        persons: parseInt(document.getElementById("persons").value) || 1,
+        message: document.getElementById("message").value,
+        themes: parseInt(inputs.themes.value) || 0,
+        rides: parseInt(inputs.rides.value) || 0,
+        combo: parseInt(inputs.combo.value) || 0,
+        rooms: parseInt(inputs.rooms.value) || 0,
+        total_amount: Math.round(
+          (parseInt(inputs.themes.value) || 0) * prices.themes +
+          (parseInt(inputs.rides.value) || 0) * prices.rides +
+          (parseInt(inputs.combo.value) || 0) * prices.combo +
+          (parseInt(inputs.rooms.value) || 0) * prices.rooms
+        )
+      };
+
+      if (formData.combo >= 5) {
+        formData.total_amount = Math.round(formData.total_amount * 0.95);
+      }
+
+      fetch("admin/submit_inquiry.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Inquiry Sent!`;
+          btn.classList.replace("bg-primary-container", "bg-green-600");
+          btn.classList.replace("text-on-primary-container", "text-white");
+          
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = originalContent;
+            btn.classList.replace("bg-green-600", "bg-primary-container");
+            btn.classList.replace("text-white", "text-on-primary-container");
+            alert("Inquiry Sent Successfully! We will contact you soon.");
+            document.getElementById("booking-form").reset();
+            updateSummary();
+          }, 2000);
+        } else {
+          throw new Error(data.message || "Failed to submit inquiry");
+        }
+      })
+      .catch(err => {
+        btn.disabled = false;
+        btn.innerHTML = originalContent;
+        alert("Error: " + err.message);
+      });
+    });
+  </script>
+</body>
+
+</html>

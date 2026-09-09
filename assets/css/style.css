@@ -1,0 +1,111 @@
+/* =============================================
+   Amazing Fun World – Shared Stylesheet
+   assets/css/style.css
+   ============================================= */
+
+/* ---- Fonts ---- */
+.font-atma {
+  font-family: "Atma", cursive;
+}
+
+/* ---- Glassmorphism ---- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav {
+  background: rgba(250, 248, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---- Material Symbols ---- */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* ---- Micro-interactions ---- */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.active-press:active {
+  transform: scale(0.95);
+}
+
+/* ---- Bento Cards (index) ---- */
+.bento-card {
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+.bento-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Ticket Cards (booking) ---- */
+.ticket-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ticket-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Hero clip (index) ---- */
+.hero-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* ---- Hero gradient (contact) ---- */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 74, 198, 0.4) 0%,
+    rgba(19, 27, 46, 0.7) 100%
+  );
+}
+
+/* ---- Box shadow (contact) ---- */
+.vibrant-shadow {
+  box-shadow: 0 20px 40px -15px rgba(0, 74, 198, 0.15);
+}
+
+/* ---- Float animation ---- */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ---- Typography shadows ---- */
+h1.font-display-lg,
+h2.font-headline-xl {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Custom Scrollbar ---- */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: #f1f5f9; }
+::-webkit-scrollbar-thumb  { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }

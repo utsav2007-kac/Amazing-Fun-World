@@ -9,9 +9,9 @@
     <div class="flex justify-between items-center max-w-container-max mx-auto gap-4">
       <!-- Logo Pill -->
       <a href="index.html"
-        class="flex items-center px-3 py-0 md:px-4 md:py-0 shadow-sm hover:scale-105 transition-transform duration-200 cursor-pointer">
-        <img alt="ThrillQuest Logo" class="h-20 md:h-20 w-auto object-contain"
-          src="assets/images/logo.png" />
+        class="flex items-center px-3 py-0 md:px-4 md:py-0 hover:scale-105 transition-transform duration-200 cursor-pointer">
+        <img alt="ThrillQuest Logo" class="h-20 md:h-20 w-auto object-contain mix-blend-multiply" style="mix-blend-mode: multiply;"
+          src="assets/images/logo3.png" />
       </a>
 
       <!-- Desktop Links Pill -->
